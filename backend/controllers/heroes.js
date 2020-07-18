@@ -1,19 +1,21 @@
-const { getLetters, checkHero, heroesList } = require("../utils/index");
+const { ErrorResponse } = require("../utils/index");
+const { fetchHeroes } = require("../services/index");
+const { asyncHandler } = require("../middlewares/index");
 
-// @desc        Get hero
+// @desc        Get heroes
 // @route       Get /api/v1/heroes
 // @access      Public
-exports.getHero = (request, response, next) => {
-  const { code } = request.body;
+exports.getHeroes = asyncHandler(async (request, response, next) => {
+  const { code } = request.query;
 
-  const letterCode = getLetters(code);
+  if (code && isNaN(code)) {
+    return next(new ErrorResponse("Please provide an valid code", 400));
+  }
 
-  const heroes = heroesList().filter((hero) =>
-    checkHero(hero, letterCode, code)
-  );
+  const data = await fetchHeroes(code);
 
-  const words = response.status(200).json({
+  response.status(200).json({
     success: true,
-    data: { code, heroes },
+    data,
   });
-};
+});
