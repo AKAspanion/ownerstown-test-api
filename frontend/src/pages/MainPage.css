@@ -1,0 +1,105 @@
+.feature-phone__wrapper {
+  padding: 10px;
+  border-radius: 32px;
+  background: #fe6754;
+  box-sizing: border-box;
+  border: 4px solid #fe5640;
+}
+
+.feature-phone__screen {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  border-radius: 24px;
+  box-shadow: 0px 0px 1px #141817;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: linear-gradient(90deg, #1f1f1f, #999999);
+}
+
+.feature-phone__background {
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: #1f1f1f;
+  border-top-right-radius: 24px;
+  box-shadow: 0px 0px 1px #141817;
+  border-bottom-right-radius: 12px;
+  clip-path: polygon(80% 0, 100% 0, 100% 100%, 60% 100%);
+}
+
+.feature-phone__display {
+  bottom: 8px;
+  margin: 10px;
+  height: 160px;
+  position: absolute;
+  background: #ffffff;
+  width: calc(100% - 20px);
+}
+
+.feature-phone__grill {
+  top: 12px;
+  left: 50%;
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  position: absolute;
+  filter: blur(0.1px);
+  background: #262d2c;
+  box-shadow: 0.5px 0.5px 0.5px #707070, inset 0.5px 0.5px 0.5px #000000;
+  transform: translateX(-50%);
+}
+
+.feature-phone__name {
+  top: 24px;
+  left: 50%;
+  width: 50px;
+  height: 4px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 2px;
+  position: absolute;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  font-family: monospace;
+  transform: translateX(-50%);
+}
+
+.feature-phone__buttons-wrapper {
+  margin-top: 12px;
+}
+
+.feature-phone__dummy-buttons,
+.feature-phone__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-phone__buttons {
+  width: 168px;
+  margin: -2px;
+  flex-wrap: wrap;
+}
+
+.feature-phone__mic-wrapper {
+  height: 12px;
+  display: flex;
+  padding: 4px 0px;
+  align-items: flex-end;
+  justify-content: center;
+}
+.feature-phone__mic {
+  width: 4px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(145deg, #262d2c, #2d3634);
+  box-shadow: 0px 0px 1px #141817, inset 0px 0px 0.5px #000000;
+}
+
+.asterix {
+  font-size: 10px;
+}
