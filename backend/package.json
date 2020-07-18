@@ -1,0 +1,29 @@
+{
+  "name": "ownerstown-test",
+  "version": "0.0.1",
+  "description": "Backend for OwnersTown test",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "SET NODE_ENV=production & node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitkumarspanion/ownerstown-test.git"
+  },
+  "author": "Ankit Kumar Pandit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitkumarspanion/ownerstown-test/issues"
+  },
+  "homepage": "https://github.com/ankitkumarspanion/ownerstown-test#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
