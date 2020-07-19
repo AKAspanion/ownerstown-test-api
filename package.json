@@ -27,5 +27,7 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
-  "proxy": "http://localhost:5000"
+  "engines": {
+    "node": "10.x"
+  }
 }
