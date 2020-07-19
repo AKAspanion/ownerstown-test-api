@@ -8,11 +8,27 @@ const { asyncHandler } = require("../middlewares/index");
 exports.getHeroes = asyncHandler(async (request, response, next) => {
   const { code } = request.query;
 
-  if (code && isNaN(code)) {
-    return next(new ErrorResponse("Please provide an valid code", 400));
+  let error = true;
+  let parsedCode = undefined;
+
+  if (code) {
+    const [
+      first = undefined,
+      second = undefined,
+      third = undefined,
+    ] = code.split(" ").map((d) => Number(d));
+
+    if (first === 0 && second && !third) {
+      error = false;
+      parsedCode = second;
+    }
   }
 
-  const data = await fetchHeroes(code);
+  if (code && error) {
+    return next(new ErrorResponse("Please provide a valid code", 400));
+  }
+
+  const data = await fetchHeroes(parsedCode);
 
   response.status(200).json({
     success: true,
