@@ -1,11 +1,4 @@
-exports.asyncHandler = (fn) => (req, res, next) =>
-  Promise.resolve(fn(req, res, next)).catch(next);
+const { errorHandler } = require("./error");
+const { asyncHandler } = require("./async");
 
-exports.errorHandler = (err, req, res, next) => {
-  let error = { ...err };
-
-  res.status(error.statusCode).json({
-    success: false,
-    error: error.customMessage,
-  });
-};
+module.exports = { errorHandler, asyncHandler };
