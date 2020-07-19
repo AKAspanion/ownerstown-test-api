@@ -7,16 +7,22 @@ function Button({
   value,
   center,
   binding,
+  onClick,
   className,
   valueClass,
 }) {
+  const handleClick = (e) => {
+    if (onClick) onClick(e, value);
+  };
+
   return (
     <div
-      style={style}
-      className={`keypad__key ${
-        center ? "keypad__key--center" : ""
-      } ${className}`}
       tabIndex="0"
+      style={style}
+      className={`keypad__key ${center ? "keypad__key--center" : ""} ${
+        className || ""
+      }`}
+      onClick={(e) => handleClick(e)}
     >
       {icon}
       {value && (

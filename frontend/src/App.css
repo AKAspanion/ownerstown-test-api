@@ -4,6 +4,7 @@
   width: 100vw;
   padding: 32px;
   display: flex;
+  min-height: 100vh;
   overflow-x: hidden;
   text-align: center;
   align-items: center;
