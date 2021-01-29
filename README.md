@@ -1,5 +1,5 @@
 # Ownerstown Backend
-This is the backend for Ownerstown interview test app.
+Backend for Ownerstown interview test app.
 
 ## Task
 Create an endpoint that recieves a code and returns the superhero name.  
@@ -17,7 +17,7 @@ Watch the demo [here](https://akaspanion.github.io/ownerstown-test-app/).
 
 * **Method**: `GET`
 
-* **URL Params**: `code=0 {superhero_code}`
+* **URL Params**: `code={superhero_code}`
 
 * **Sample Call Url**: https://salty-woodland-05776.herokuapp.com/api/v1/heroes?code=0%204855
 
